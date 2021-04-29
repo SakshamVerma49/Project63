@@ -15,9 +15,31 @@ export default class App extends React.Component {
     this.state = {
       text: '',
       displayText: '',
+      word:'',
+      definition:'',
+      lexicalCategory:'',
       chunks: []
     };
-  } 
+  }
+  
+  getWord = (word) => {
+    var searchKeyword = word.toLowerCase();
+    var url= "https://sakshamverma49.github.io/Project63/"+ searchKeyword+ ".json";
+    return fetch(url)
+    .then((data) => {
+      if(data.status===200){
+        return data.json()
+      }
+      else
+      {
+        return null
+      }
+    })
+    .then(response => {
+//
+    })
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -49,6 +71,15 @@ export default class App extends React.Component {
             <Text style={styles.displayText}>{item}</Text>
           );
         })}
+        </View>
+
+        <View>
+       <Text style={styles.displayText}>
+         Definition: {" "}
+       </Text>
+       <Text style={{fontSize:14}}>
+        {this.state.definition}
+       </Text>
         </View>
         
       </View>
