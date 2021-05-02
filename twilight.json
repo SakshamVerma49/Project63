@@ -1,0 +1,12 @@
+{
+    "status": 200,
+    "word": "twilight",
+    "type": "noun",
+    "pronunciation":"/ˈtwīˌlīt/",
+    "definitions": [
+        {
+         "description": "a period or state of obscurity, ambiguity, or gradual decline.",
+         "wordtype": "noun"
+         }],
+    "example": "he was in the twilight of his career!"
+}
