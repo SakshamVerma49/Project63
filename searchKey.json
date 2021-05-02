@@ -1,0 +1,12 @@
+{
+    "status": 200,
+    "word": "search",
+    "type": "verb",
+    "pronunciation":"mam-uhk",
+    "definitions": [
+        {
+         "description": "Enter the work to find the meaning",
+         "wordtype": "verb"
+         }],
+    "example": "Search!"
+}
