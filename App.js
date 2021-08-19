@@ -36,8 +36,25 @@ export default class App extends React.Component {
       }
     })
     .then(response => {
-//
-    })
+      var responseObject = response
+      if(responseObject){
+      var wordData = responseObject.definitions[0]
+      var definition = wordData.description
+      var lexicalCategory = wordData.wordtype
+      this.setState = ({
+        "word" : this.state.text,
+        "definition" : definition,
+        "lexicalCategory" : lexicalCategory 
+      });
+      }
+      else
+      {
+        this.setState({
+          "word" : this.state.text,
+          "definition" : "Not Found",
+        });
+      }
+    });
   }
 
   render() {
